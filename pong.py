@@ -109,7 +109,7 @@ win.onkeypress(paddleBDown, "Down")
 # when the Down arrow key is pressed
 
 # Main game loop
-while True :
+while max(score_a, score_b) <= 20 :
     win.update()
     #   Updates the screen every time the loop runs / executes
     #   Inside the screen, (0,0) is at the center and 400px to the right and 400px to the left from (0,0)
