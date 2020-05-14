@@ -19,9 +19,3 @@ Press the **Down** arrow key to move the right paddle down
 ### Scores
 
 The score gets incremented whenever the opponent player misses a paddle - ball collision. 
-
-### Begin game : 
-Open the terminal or command prompt in the folder where you have saved the game and execute `pong.py`
-If you are on Linux, execute the following on the terminal
-`$ cd <to the directory where you have saved the game> `
-`$ python pong.py`
