@@ -128,14 +128,12 @@ while True :
         pongBall.goto(0, 0)
         pongBall.dx *= -1
 
-        # Paddle and ball collisions
+    # Paddle and ball collisions
 
-        if (340 < pongBall.xcor() < 350) and (
-                paddle_b.ycor() + 40 > pongBall.ycor() > paddle_b.ycor() - 40) :
-            pongBall.setx(340)
-            pongBall.dx *= -1
+    if (340 < pongBall.xcor() < 350) and (paddle_b.ycor() + 50 > pongBall.ycor() > paddle_b.ycor() - 50) :
+        pongBall.setx(330)
+        pongBall.dx *= -1
 
-        if (-340 > pongBall.xcor() > -350) and (
-                paddle_a.ycor() + 40 > pongBall.ycor() > paddle_a.ycor() - 40) :
-            pongBall.setx(-340)
-            pongBall.dx *= -1
+    if (-340 > pongBall.xcor() > -350) and (paddle_a.ycor() + 50 > pongBall.ycor() > paddle_a.ycor() - 50) :
+        pongBall.setx(-330)
+        pongBall.dx *= -1
