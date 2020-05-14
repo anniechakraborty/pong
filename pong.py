@@ -8,6 +8,10 @@ win.setup(width=800, height=600)
 win.tracer(0)
 # this prevents the window from auto updating and makes the game faster - we can update the window manually now.
 
+# Score Variables
+score_a = 0
+score_b = 0
+
 # Paddle A
 paddle_a = turtle.Turtle()
 paddle_a.speed(0)
@@ -47,6 +51,7 @@ pen.hideturtle()
 pen.goto(0, 260)
 # This is near the top border
 pen.write("Player A : 0     Player B : 0", align="center", font=("Courier", 24, "normal"))
+
 
 # Functions to move paddles
 
@@ -132,10 +137,17 @@ while True :
     if pongBall.xcor() > 390 :
         pongBall.goto(0, 0)
         pongBall.dx *= -1
+        score_a += 1
+        pen.clear()
+        pen.write("Player A : {}     Player B : {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
 
     if pongBall.xcor() < -390 :
         pongBall.goto(0, 0)
         pongBall.dx *= -1
+        score_b += 1
+        pen.clear()
+        pen.write("Player A : {}     Player B : {}".format(score_a, score_b), align="center",
+                  font=("Courier", 24, "normal"))
 
     # Paddle and ball collisions
 
