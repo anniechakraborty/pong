@@ -105,3 +105,26 @@ while True :
     pongBall.sety(pongBall.ycor() + pongBall.dy)
 
     # Move ball done
+
+    # Border checking starts
+
+    # For the top and down borders
+
+    if pongBall.ycor() > 290 :  # as the max positive y coord. is 300
+        pongBall.sety(290)  # we set the ball's y coord. as maximum
+        pongBall.dy *= -1  # and then change it's direction
+
+    if pongBall.ycor() < -290 :
+        pongBall.sety(-290)
+        pongBall.dy *= -1
+
+    # For the left and right borders
+
+    if pongBall.xcor() > 390 :
+        pongBall.goto(0, 0)
+        pongBall.dx *= -1
+
+    if pongBall.xcor() < -390 :
+        pongBall.goto(0, 0)
+        pongBall.dx *= -1
+
