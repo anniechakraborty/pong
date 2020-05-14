@@ -38,6 +38,15 @@ pongBall.penup()
 pongBall.dx = 0.032
 pongBall.dy = 0.032
 
+# Pen
+pen = turtle.Turtle()
+pen.speed(0)
+pen.color("white")
+pen.penup()
+pen.hideturtle()
+pen.goto(0, 260)
+# This is near the top border
+pen.write("Player A : 0     Player B : 0", align="center", font=("Courier", 24, "normal"))
 
 # Functions to move paddles
 
