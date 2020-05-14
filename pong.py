@@ -93,3 +93,15 @@ win.onkeypress(paddleBUp, "Up")
 win.onkeypress(paddleBDown, "Down")
 # after the listen() makes the window wait for the keyboard input, the above onkeypress() calls the paddleBDown()
 # when the Down arrow key is pressed
+
+# Main game loop
+while True :
+    win.update()
+    #   Updates the screen every time the loop runs / executes
+    #   Inside the screen, (0,0) is at the center and 400px to the right and 400px to the left from (0,0)
+    #   make up the width and 300px from the top and 300 px from the bottom make up the height of the window.
+
+    pongBall.setx(pongBall.xcor() + pongBall.dx)
+    pongBall.sety(pongBall.ycor() + pongBall.dy)
+
+    # Move ball done
