@@ -1,4 +1,5 @@
 import turtle
+import os
 
 # Creating window
 win = turtle.Screen()
@@ -154,7 +155,9 @@ while max(score_a, score_b) <= 20 :
     if (340 < pongBall.xcor() < 350) and (paddle_b.ycor() + 50 > pongBall.ycor() > paddle_b.ycor() - 50) :
         pongBall.setx(330)
         pongBall.dx *= -1
+        os.system("aplay ball_bounce.wav&")
 
     if (-340 > pongBall.xcor() > -350) and (paddle_a.ycor() + 50 > pongBall.ycor() > paddle_a.ycor() - 50) :
         pongBall.setx(-330)
         pongBall.dx *= -1
+        os.system("aplay ball_bounce.wav&")
